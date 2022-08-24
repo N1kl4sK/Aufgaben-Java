@@ -1,3 +1,4 @@
+package Schrittzaehler;
 public class StepCounter {
     int schritte;
     String datumZ;

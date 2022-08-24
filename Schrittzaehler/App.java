@@ -1,3 +1,4 @@
+package Schrittzaehler;
 public class App {
     public static void main(String[] args) throws Exception {
         StepCounter sc1 = new StepCounter("11.11.2011");
