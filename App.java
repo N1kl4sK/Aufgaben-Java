@@ -1,5 +1,6 @@
 import Aufgabe_1_Schrittzaehler.StepCounter;
 import Aufgabe_2_BodyMassIndex.Health;
+import Aufgabe_3_Songtextsuche.Songtextsuche;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -19,7 +20,10 @@ public class App {
 
         // Aufgabe 2
 
-        Health h1 = new Health();
-        System.out.println(h1.bmi(57, 1.8));
+        System.out.println(Health.bmi(57, 1.8));
+
+        // Aufgabe 3
+
+        System.out.println(Songtextsuche.getURL("MFG", "Die Fantastischen Vier"));
     }
 }

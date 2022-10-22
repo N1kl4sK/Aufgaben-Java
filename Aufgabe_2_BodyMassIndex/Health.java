@@ -6,7 +6,7 @@ public class Health {
         bmi = gewicht / (groesse * groesse);
         return bmi;
     }
-    public String bmi(int gewicht, double groesse) {
+    public static String bmi(int gewicht, double groesse) {
         double bmi = calculateBMI(gewicht, groesse);
         String gewichtsklasse = "";
         if (bmi <= 18.5) {
