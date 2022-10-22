@@ -6,7 +6,7 @@ public class Fernbedienung {
 
     public Fernbedienung() {
         aktuellerSender = 0;
-        sender = new String [31];
+        sender = new String[31];
         for (int i = 0; i < sender.length; i++) {
             sender[i] = "Programm " + (i + 1);
         }
@@ -15,8 +15,7 @@ public class Fernbedienung {
     public void SenderHoch() {
         if (aktuellerSender < 30) {
             aktuellerSender++;
-        }
-        else {
+        } else {
             aktuellerSender = 0;
         }
     }
@@ -24,8 +23,7 @@ public class Fernbedienung {
     public void SenderRunter() {
         if (aktuellerSender > 0) {
             aktuellerSender--;
-        }
-        else {
+        } else {
             aktuellerSender = 30;
         }
     }

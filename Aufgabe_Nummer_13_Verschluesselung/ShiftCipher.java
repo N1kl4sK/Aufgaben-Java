@@ -2,7 +2,7 @@ package Aufgabe_Nummer_13_Verschluesselung;
 
 public class ShiftCipher {
     private int schluessel;
-    
+
     public ShiftCipher(int schluessel) {
         this.schluessel = schluessel;
     }

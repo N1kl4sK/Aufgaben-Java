@@ -13,8 +13,7 @@ public class Zwischenablage {
         if (position < zwischenablage.length - 1) {
             position = position + 1;
             zwischenablage[position] = string;
-        }
-        else {
+        } else {
             zwischenablage[0] = null;
             for (int i = 1; i < zwischenablage.length; i++) {
                 zwischenablage[i - 1] = zwischenablage[i];
@@ -28,8 +27,7 @@ public class Zwischenablage {
         zwischenablage[position] = null;
         if (this.position > 0) {
             position = position - 1;
-        }
-        else {
+        } else {
             position = 0;
         }
         return string;

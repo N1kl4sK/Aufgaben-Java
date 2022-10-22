@@ -23,10 +23,9 @@ public class TemperatureGraph {
             int minimalTemperatur = getMinTemperatur();
             for (int i = maximalTemperatur; i >= minimalTemperatur; i = i - 1) {
                 for (int j = 0; j < temperaturen.length; j++) {
-                    if(temperaturen[j] >= i) {
+                    if (temperaturen[j] >= i) {
                         System.out.print(" #");
-                    }
-                    else {
+                    } else {
                         System.out.print("  ");
                     }
                 }

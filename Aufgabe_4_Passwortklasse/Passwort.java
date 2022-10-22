@@ -38,8 +38,7 @@ public class Passwort {
         }
         if (lower == true && upper == true && figure == true && special == true) {
             return true;
-        }
-        else {
+        } else {
             return false;
         }
     }

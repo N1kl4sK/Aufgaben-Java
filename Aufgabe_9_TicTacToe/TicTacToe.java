@@ -8,6 +8,7 @@ public class TicTacToe {
         spielfeld = new int[9];
         reset();
     }
+
     public void reset() {
         for (int i = 0; i < spielfeld.length; i++) {
             spielfeld[i] = 0;
@@ -35,7 +36,7 @@ public class TicTacToe {
                 case 0:
                     temp = temp + " ";
                     break;
-                case 1: 
+                case 1:
                     temp = temp + "X";
                     break;
                 case 2:
