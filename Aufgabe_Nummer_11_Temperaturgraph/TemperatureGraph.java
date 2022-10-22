@@ -1,11 +1,10 @@
 package Aufgabe_Nummer_11_Temperaturgraph;
 
 public class TemperatureGraph {
-    private int jahr;
     private int[] temperaturen;
+    private int jahr;
 
     public TemperatureGraph(int jahr) {
-        this.jahr = jahr;
         temperaturen = new int[12];
         for (int i = 0; i < temperaturen.length; i++) {
             temperaturen[i] = -1000;

@@ -11,6 +11,7 @@ import Aufgabe_8_Druckerwarteschlange.PrinterQueue;
 import Aufgabe_9_TicTacToe.TicTacToe;
 import Aufgabe_Nummer_10_Zwischenablage.Zwischenablage;
 import Aufgabe_Nummer_11_Temperaturgraph.TemperatureGraph;
+import Aufgabe_Nummer_12_AmbientLight.AmbiLight;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -79,7 +80,7 @@ public class App {
                 break;
             case "12":
                 breakLine();
-                // Aufgabe 12
+                aufgabe12();
                 breakLine();
                 break;
             case "13":
@@ -218,7 +219,7 @@ public class App {
 
     // Aufgabe 11
     public static void aufgabe11() {
-        TemperatureGraph tg = new TemperatureGraph(2017);
+        TemperatureGraph tg = new TemperatureGraph(2022);
         tg.addTemperatur(1,2);
         tg.addTemperatur(2, -3);
         tg.addTemperatur(3,7);
@@ -232,6 +233,14 @@ public class App {
         tg.addTemperatur(11,5);
         tg.addTemperatur(12,2);
         tg.ausgabeGraph();
+    }
 
+    // Aufgabe 12
+    public static void aufgabe12() {
+        AmbiLight al = new AmbiLight(0, 0, 50);
+        for (int i = 0; i < 50; i++) {
+            al.erhoeheHelligkeit();
+            System.out.println(al.getNaechsteFarbe());
+        }
     }
 }
