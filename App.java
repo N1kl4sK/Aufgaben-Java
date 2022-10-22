@@ -3,6 +3,7 @@ import Aufgabe_2_BodyMassIndex.Health;
 import Aufgabe_3_Songtextsuche.Songtextsuche;
 import Aufgabe_4_Passwortklasse.Passwort;
 import Aufgabe_5_Kopffitness.MulitiplicationQuiz;
+import Aufgabe_6_Fernbedienung.Fernbedienung;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -46,5 +47,14 @@ public class App {
         MulitiplicationQuiz mq = new MulitiplicationQuiz();
         System.out.println(mq.getExercise());
         System.out.println(mq.getResult());
+
+        // Aufgabe 6
+
+        Fernbedienung fb = new Fernbedienung();
+        fb.senderNamenSpeichern("ARD");
+        for (int i = 0; i < 31; i++) {
+            System.out.println(fb.getSenderName());
+            fb.SenderHoch();
+        }
     }
 }
