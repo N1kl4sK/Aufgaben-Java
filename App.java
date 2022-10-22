@@ -12,6 +12,7 @@ import Aufgabe_9_TicTacToe.TicTacToe;
 import Aufgabe_Nummer_10_Zwischenablage.Zwischenablage;
 import Aufgabe_Nummer_11_Temperaturgraph.TemperatureGraph;
 import Aufgabe_Nummer_12_AmbientLight.AmbiLight;
+import Aufgabe_Nummer_13_Verschluesselung.ShiftCipher;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -85,7 +86,7 @@ public class App {
                 break;
             case "13":
                 breakLine();
-                // Aufgabe 13
+                aufgabe13();
                 breakLine();
                 break;
             case "14":
@@ -233,6 +234,7 @@ public class App {
         tg.addTemperatur(11,5);
         tg.addTemperatur(12,2);
         tg.ausgabeGraph();
+        System.out.println("Das Jahr ist " + TemperatureGraph.jahr);
     }
 
     // Aufgabe 12
@@ -242,5 +244,17 @@ public class App {
             al.erhoeheHelligkeit();
             System.out.println(al.getNaechsteFarbe());
         }
+    }
+
+    // Aufgabe 13
+    public static void aufgabe13() {
+        ShiftCipher sc = new ShiftCipher(3);
+        String verschluesselt = sc.verschluesseln("abcdefghijklmnopqrstuvwxyz");
+        System.out.println(verschluesselt);
+        System.out.println(sc.entschluesseln(verschluesselt));
+        sc = new ShiftCipher(3);
+        verschluesselt = sc.verschluesseln("DieserTextIstVerschluesselt");
+        System.out.println(verschluesselt);
+        System.out.println(sc.entschluesseln(verschluesselt));
     }
 }

@@ -2,7 +2,7 @@ package Aufgabe_Nummer_11_Temperaturgraph;
 
 public class TemperatureGraph {
     private int[] temperaturen;
-    private int jahr;
+    public static int jahr;
 
     public TemperatureGraph(int jahr) {
         temperaturen = new int[12];
