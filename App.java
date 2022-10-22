@@ -2,6 +2,7 @@ import Aufgabe_1_Schrittzaehler.StepCounter;
 import Aufgabe_2_BodyMassIndex.Health;
 import Aufgabe_3_Songtextsuche.Songtextsuche;
 import Aufgabe_4_Passwortklasse.Passwort;
+import Aufgabe_5_Kopffitness.MulitiplicationQuiz;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -39,5 +40,11 @@ public class App {
         System.out.println(pwd.changePassword(pwd_first, pwd_strong));
         pwd_first[0] = 'P';
         System.out.println(pwd.changePassword(pwd_first, pwd_strong));
+
+        // Aufgabe 5
+
+        MulitiplicationQuiz mq = new MulitiplicationQuiz();
+        System.out.println(mq.getExercise());
+        System.out.println(mq.getResult());
     }
 }
