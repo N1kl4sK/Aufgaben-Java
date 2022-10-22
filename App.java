@@ -4,12 +4,12 @@ import Aufgabe_3_Songtextsuche.Songtextsuche;
 import Aufgabe_4_Passwortklasse.Passwort;
 import Aufgabe_5_Kopffitness.MulitiplicationQuiz;
 import Aufgabe_6_Fernbedienung.Fernbedienung;
+import Aufgabe_7_Stoppuhr.StopWatch;
 
 public class App {
     public static void main(String[] args) throws Exception {
-
+    
         // Aufgabe 1
-
         StepCounter sc1 = new StepCounter("11.11.2011");
         for (int i = 0; i < 1111; i++) {
             sc1.incrementSteps();
@@ -55,6 +55,19 @@ public class App {
         for (int i = 0; i < 31; i++) {
             System.out.println(fb.getSenderName());
             fb.SenderHoch();
+        }
+
+        // Aufgabe 7
+
+        StopWatch sw = new StopWatch();
+        sw.start();
+        try {
+            Thread.sleep(1000);
+            sw.stop();
+            System.out.println(sw.vergangeneZeit());
+            } 
+        catch (InterruptedException e) {
+            throw new RuntimeException(e);
         }
     }
 }
