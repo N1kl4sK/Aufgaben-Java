@@ -1,6 +1,5 @@
 import java.util.Scanner;
 
-import Aufgabe_10_Zwischenablage.Zwischenablage;
 import Aufgabe_1_Schrittzaehler.StepCounter;
 import Aufgabe_2_BodyMassIndex.Health;
 import Aufgabe_3_Songtextsuche.Songtextsuche;
@@ -10,6 +9,8 @@ import Aufgabe_6_Fernbedienung.Fernbedienung;
 import Aufgabe_7_Stoppuhr.StopWatch;
 import Aufgabe_8_Druckerwarteschlange.PrinterQueue;
 import Aufgabe_9_TicTacToe.TicTacToe;
+import Aufgabe_Nummer_10_Zwischenablage.Zwischenablage;
+import Aufgabe_Nummer_11_Temperaturgraph.TemperatureGraph;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -73,7 +74,7 @@ public class App {
                 break;
             case "11":
                 breakLine();
-                // Aufgabe 11
+                aufgabe11();
                 breakLine();
                 break;
             case "12":
@@ -213,5 +214,24 @@ public class App {
         System.out.println(za);
         za.copy("krumm");
         System.out.println(za);
+    }
+
+    // Aufgabe 11
+    public static void aufgabe11() {
+        TemperatureGraph tg = new TemperatureGraph(2017);
+        tg.addTemperatur(1,2);
+        tg.addTemperatur(2, -3);
+        tg.addTemperatur(3,7);
+        tg.addTemperatur(4,8);
+        tg.addTemperatur(5,14);
+        tg.addTemperatur(6,16);
+        tg.addTemperatur(7,17);
+        tg.addTemperatur(8,18);
+        tg.addTemperatur(9,14);
+        tg.addTemperatur(10,9);
+        tg.addTemperatur(11,5);
+        tg.addTemperatur(12,2);
+        tg.ausgabeGraph();
+
     }
 }
