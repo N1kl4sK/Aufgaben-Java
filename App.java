@@ -1,4 +1,6 @@
 import java.util.Scanner;
+
+import Aufgabe_10_Zwischenablage.Zwischenablage;
 import Aufgabe_1_Schrittzaehler.StepCounter;
 import Aufgabe_2_BodyMassIndex.Health;
 import Aufgabe_3_Songtextsuche.Songtextsuche;
@@ -66,7 +68,7 @@ public class App {
                 break;
             case "10":
                 breakLine();
-                // Aufgabe 10
+                aufgabe10();
                 breakLine();
                 break;
             case "11":
@@ -198,5 +200,18 @@ public class App {
         System.out.println(ttt);
         ttt.setMark(1, 1);
         System.out.println(ttt);
+    }
+
+    // Aufgabe 10
+    public static void aufgabe10() {
+        Zwischenablage za = new Zwischenablage(4);
+        za.copy("Die");
+        System.out.println(za);
+        za.copy("Banane");
+        System.out.println(za);
+        za.copy("ist");
+        System.out.println(za);
+        za.copy("krumm");
+        System.out.println(za);
     }
 }
