@@ -5,11 +5,13 @@ import Aufgabe_4_Passwortklasse.Passwort;
 import Aufgabe_5_Kopffitness.MulitiplicationQuiz;
 import Aufgabe_6_Fernbedienung.Fernbedienung;
 import Aufgabe_7_Stoppuhr.StopWatch;
+import Aufgabe_8_Druckerwarteschlange.PrinterQueue;
 
 public class App {
     public static void main(String[] args) throws Exception {
     
         // Aufgabe 1
+
         StepCounter sc1 = new StepCounter("11.11.2011");
         for (int i = 0; i < 1111; i++) {
             sc1.incrementSteps();
@@ -57,7 +59,7 @@ public class App {
             fb.SenderHoch();
         }
 
-        // Aufgabe 7
+        // Aufgabe 7 (kompliziert)
 
         StopWatch sw = new StopWatch();
         sw.start();
@@ -69,5 +71,25 @@ public class App {
         catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
+
+        // Aufgabe 8 (kompliziert)
+
+        PrinterQueue pq = new PrinterQueue(1);
+        try {
+            pq.addJob("Hallo");
+            pq.addJob("Weiter");
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        System.out.println(pq.nextJob());
+        System.out.println(pq.nextJob());
+        try {
+            pq.addJob("Weiter");
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        System.out.println(pq.nextJob());
     }
 }
