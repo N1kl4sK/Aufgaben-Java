@@ -1,6 +1,7 @@
 import Aufgabe_1_Schrittzaehler.StepCounter;
 import Aufgabe_2_BodyMassIndex.Health;
 import Aufgabe_3_Songtextsuche.Songtextsuche;
+import Aufgabe_4_Passwortklasse.Passwort;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -25,5 +26,18 @@ public class App {
         // Aufgabe 3
 
         System.out.println(Songtextsuche.getURL("MFG", "Die Fantastischen Vier"));
+
+        // Aufgabe 4
+
+        char[] pwd_first = "PassWD15!!".toCharArray();
+        char[] pwd_weak = "1234567890".toCharArray();
+        char[] pwd_strong = "NewPWD16!!".toCharArray();
+
+        Passwort pwd = new Passwort(pwd_first);
+        System.out.println(pwd.changePassword(pwd_first, pwd_weak));
+        pwd_first[0] = 'p';
+        System.out.println(pwd.changePassword(pwd_first, pwd_strong));
+        pwd_first[0] = 'P';
+        System.out.println(pwd.changePassword(pwd_first, pwd_strong));
     }
 }
