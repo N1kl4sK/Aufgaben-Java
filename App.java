@@ -13,6 +13,7 @@ import Aufgabe_Nummer_10_Zwischenablage.Zwischenablage;
 import Aufgabe_Nummer_11_Temperaturgraph.TemperatureGraph;
 import Aufgabe_Nummer_12_AmbientLight.AmbiLight;
 import Aufgabe_Nummer_13_Verschluesselung.ShiftCipher;
+import Aufgabe_Nummer_14_Mastermind.Mastermind;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -91,7 +92,7 @@ public class App {
                 break;
             case "14":
                 breakLine();
-                // Aufgabe 14
+                aufgabe14();
                 breakLine();
                 break;
             default:
@@ -221,18 +222,18 @@ public class App {
     // Aufgabe 11
     public static void aufgabe11() {
         TemperatureGraph tg = new TemperatureGraph(2022);
-        tg.addTemperatur(1,2);
+        tg.addTemperatur(1, 2);
         tg.addTemperatur(2, -3);
-        tg.addTemperatur(3,7);
-        tg.addTemperatur(4,8);
-        tg.addTemperatur(5,14);
-        tg.addTemperatur(6,16);
-        tg.addTemperatur(7,17);
-        tg.addTemperatur(8,18);
-        tg.addTemperatur(9,14);
-        tg.addTemperatur(10,9);
-        tg.addTemperatur(11,5);
-        tg.addTemperatur(12,2);
+        tg.addTemperatur(3, 7);
+        tg.addTemperatur(4, 8);
+        tg.addTemperatur(5, 14);
+        tg.addTemperatur(6, 16);
+        tg.addTemperatur(7, 17);
+        tg.addTemperatur(8, 18);
+        tg.addTemperatur(9, 14);
+        tg.addTemperatur(10, 9);
+        tg.addTemperatur(11, 5);
+        tg.addTemperatur(12, 2);
         tg.ausgabeGraph();
         System.out.println("Das Jahr ist " + TemperatureGraph.jahr);
     }
@@ -256,5 +257,23 @@ public class App {
         verschluesselt = sc.verschluesseln("DieserTextIstVerschluesselt");
         System.out.println(verschluesselt);
         System.out.println(sc.entschluesseln(verschluesselt));
+    }
+
+    // Aufgabe 14
+    public static void aufgabe14() {
+        Mastermind mm = new Mastermind(
+                Mastermind.RED,
+                Mastermind.BLUE,
+                Mastermind.GREY,
+                Mastermind.BLUE);
+        int[] guess = mm.guess(
+                Mastermind.GREEN,
+                Mastermind.GREY,
+                Mastermind.BLUE,
+                Mastermind.BLUE);
+        System.out.println("Code: Rot, Blau, Grau, Blau");
+        System.err.println("Guess: Grün, Grau, Blau, Blau");
+        System.out.println("correctColorsAndPositions: \t" + guess[0]);
+        System.out.println("correctColors: \t\t" + guess[1]);
     }
 }
