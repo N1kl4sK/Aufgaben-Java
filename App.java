@@ -4,7 +4,7 @@ import Aufgabe_1_Schrittzaehler.StepCounter;
 import Aufgabe_2_BodyMassIndex.Health;
 import Aufgabe_3_Songtextsuche.Songtextsuche;
 import Aufgabe_4_Passwortklasse.Passwort;
-import Aufgabe_5_Kopffitness.MulitiplicationQuiz;
+import Aufgabe_5_Kopffitness.MultiplicationQuiz;
 import Aufgabe_6_Fernbedienung.Fernbedienung;
 import Aufgabe_7_Stoppuhr.StopWatch;
 import Aufgabe_8_Druckerwarteschlange.PrinterQueue;
@@ -22,6 +22,20 @@ public class App {
         System.out.println("Willkommen im Java Workout von Niklas K.");
         breakLine();
         System.out.println("Welche Aufgabe möchten Sie sich ansehen? (Zahl von 1-14 eingeben)");
+        System.out.println("(1) Schrittzähler");
+        System.out.println("(2) BMI");
+        System.out.println("(3) Songtextsuche");
+        System.out.println("(4) Passwortklasse");
+        System.out.println("(5) Kopffitness");
+        System.out.println("(6) Fernbedienung");
+        System.out.println("(7) Stoppuhr");
+        System.out.println("(8) Druckerwarteschlange");
+        System.out.println("(9) TicTacToe");
+        System.out.println("(10) Zwischenablage");
+        System.out.println("(11) Temperaturgraph");
+        System.out.println("(12) AmbientLight");
+        System.out.println("(13) Verschlüsselung");
+        System.out.println("(14) Mastermind");
         breakLine();
         String entscheidung = sc.nextLine();
         switch (entscheidung) {
@@ -147,7 +161,7 @@ public class App {
 
     // Aufgabe 5
     public static void aufgabe5() {
-        MulitiplicationQuiz mq = new MulitiplicationQuiz();
+        MultiplicationQuiz mq = new MultiplicationQuiz();
         System.out.println(mq.getExercise());
         System.out.println(mq.getResult());
     }
