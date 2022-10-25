@@ -1,10 +1,10 @@
 package Aufgabe_5_Kopffitness;
 
-public class MulitiplicationQuiz {
+public class MultiplicationQuiz {
     private int zahl1;
     private int zahl2;
 
-    public MulitiplicationQuiz() {
+    public MultiplicationQuiz() {
         zahl1 = (int) (Math.random() * 20 + 1);
         zahl2 = (int) (Math.random() * 20 + 1);
     }
